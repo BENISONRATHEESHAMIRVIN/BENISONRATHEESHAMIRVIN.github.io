@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <title>index.html</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Asset/unnamed.jpg"> 
+    <img src="Asset/IMG_3154.jpg" alt="View from aircraft" width="400" height="400" align="center" id="imgs">
+    <body background="Asset/IMG_1026.JPG" alt="random background"></body>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+    <header>
+      <nav>
+        <ul id="a">
+          <li><a href="#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Destinations.html">Destinations</a></li>
+         
+         
+        </ul>
+      </nav>
+      <div class="gallery">
+        <div class="thumbnails">
+          <img src="Asset/photo-2018-1c.jpeg" alt="view of on board flight passengers" onclick="showImage('image1.jpg')">
+          <img src="Asset/air-canada-a220-business-class-09.jpeg" alt="view of Seating" onclick="showImage('image2.jpg')">
+          <img src="Asset/new-food.jpeg" alt="food on my aircraft" onclick="showImage('image3.jpg')">
+          <img src="Asset/dji_fly_20230220_105924_749_1676916324231_photo_optimized.jpg" alt= "view from the top" onclick="showImage('image4.jpg')">
+        </div>
+        <div class="preview">
+          <img id="preview-image">
+        </div>
+      </div>
+      
+<html>
+  <head>
+    <title>Airline Website</title>
+  </head>
+  <body>
+    <h1>Welcome to my Airline Website!</h1>
+    <form>
+      <label for="flightNumber">Flight Number:</label>
+      <input type="text" id="flightNumber">
+      <br>
+      <label for="seatClass">Seat Class:</label>
+      <select id="seatClass">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+        <option value="first">First Class</option>
+      </select>
+      <br>
+      <button type="button" onclick="checkOverbooked()">Search Flights</button>
+    </form>
+    <div id="message"></div>
+    <script>
+      function checkOverbooked() {
+  const seatClass = document.getElementById("seatClass").value;
+  const messageDiv = document.getElementById("message");
+  while (messageDiv.firstChild) {
+    messageDiv.removeChild(messageDiv.firstChild);
+  }
+  if (seatClass === "first") {
+    const messageP = document.createElement("p");
+    const messageText = document.createTextNode("Congratulations! You have chosen first class. If this flight is overbooked, you will receive a free upgrade to business class.");
+    messageP.appendChild(messageText);
+    messageDiv.appendChild(messageP);
+  } else if (seatClass === "business") {
+    const messageP = document.createElement("p");
+    const messageText = document.createTextNode("You have chosen business class.");
+    messageP.appendChild(messageText);
+    messageDiv.appendChild(messageP);
+  } else if (seatClass === "economy") {
+    const messageP = document.createElement("p");
+    const messageText = document.createTextNode("You have chosen economy class.");
+    messageP.appendChild(messageText);
+    messageDiv.appendChild(messageP);
+  }
+}
+
+    </script>
+  </body>
+  
+</html>
+
+    </header>
+    <audio controls autoplay>
+      <source src="Asset/Bloody-Sweet-MassTamilan.dev.mp3" type="audio/mp3">
+      <source src="Asset/Bloody-Sweet-MassTamilan.dev.mp3" type="audio/mp3">
+    </audio>
+    <main>
+      <section id="home">
+        <p>My Airline is a leading airline company offering flights to top destinations around the world, 
+          we provide safe and comfortable flights to your favorite destinations. We pride ourselves on our exceptional customer service. From the moment you book your flight to the time you land at your destination, our friendly and professional staff will ensure that your experience with us is comfortable and stress-free. We also offer a range of amenities on our flights including free meal and drinks.  Plus, our state-of-the-art planes are equipped with the latest technology to ensure your safety and comfort. Thank you for choosing my Airline for your travel needs. We look forward to welcoming you on board!"</p>
+        
+           
+      <section id="booking">
+        <h2>Book Your Flight</h2>
+        <form action="submit-booking.php" method="post">
+          <div class="flex-container">    
+          
+            <div class="flex-item"><label for="from">From:</label>
+              <input type="text" id="from" name="from"><br></div>    
+            <div class="flex-item"><label for="to">To:</label>
+              <input type="text" id="to" name="to"><br></div>    
+            <div class="flex-item"><label for="date">Date:</label>
+              <input type="date" id="date" name="date"><br> </div>
+</div>
+`          <input type="submit" value="Submit">
+
+</form align="center">
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us at <a id="b"href="mailto:contact@myairline.com">contact@myairline.com</a> with any questions or concerns.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy; My Airline 2023</p>
+    </footer>
+  </body>
+</html>
+
+
